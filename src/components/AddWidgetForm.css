@@ -1,0 +1,91 @@
+/* src/components/AddWidgetForm.css */
+.add-widget-form-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .add-widget-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .add-widget-form h3 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #2c3e50;
+    font-size: 1.8em;
+    text-align: center;
+  }
+  
+  .add-widget-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .add-widget-form input,
+  .add-widget-form textarea {
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #bdc3c7;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .add-widget-form input:focus,
+  .add-widget-form textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+  }
+  
+  .add-widget-form textarea {
+    height: 120px;
+    resize: vertical;
+  }
+  
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .form-buttons button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .form-buttons button[type="submit"] {
+    background-color: #2ecc71;
+    color: white;
+  }
+  
+  .form-buttons button[type="submit"]:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px);
+  }
+  
+  .form-buttons button[type="button"] {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .form-buttons button[type="button"]:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+  }
