@@ -1,4 +1,3 @@
-// src/components/Dashboard.js
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addWidget, removeWidget } from '../store/dashboardSlice';

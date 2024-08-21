@@ -1,4 +1,3 @@
-// src/store/dashboardSlice.js
 import { createSlice } from '@reduxjs/toolkit';
 import { initialData } from '../data/initialData';
 

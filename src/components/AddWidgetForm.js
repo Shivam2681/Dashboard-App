@@ -1,4 +1,3 @@
-// src/components/AddWidgetForm.js
 import React, { useState } from 'react';
 import './AddWidgetForm.css';
 
