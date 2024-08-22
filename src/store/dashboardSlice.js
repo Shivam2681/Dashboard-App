@@ -42,8 +42,24 @@ const dashboardSlice = createSlice({
       }
       saveState(state);
     },
+    addCategory: (state, action) => {
+      state.categories.push({ name: action.payload, widgets: [] });
+      saveState(state);
+    },
+    removeCategory: (state, action) => {
+      state.categories = state.categories.filter(c => c.name !== action.payload);
+      saveState(state);
+    },
+    removeWidgetFromCategory: (state, action) => {
+      const { categoryName, widgetId } = action.payload;
+      const category = state.categories.find(c => c.name === categoryName);
+      if (category) {
+        category.widgets = category.widgets.filter(w => w.id !== widgetId);
+      }
+      saveState(state);
+    },
   },
 });
 
-export const { addWidget, removeWidget } = dashboardSlice.actions;
+export const { addWidget, removeWidget, addCategory, removeCategory, removeWidgetFromCategory } = dashboardSlice.actions;
 export default dashboardSlice.reducer;
